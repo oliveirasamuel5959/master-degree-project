@@ -1,0 +1,15 @@
+[
+  {
+    "title": "Early-Anomaly Prediction in Surveillance Cameras for Security Applications",
+    "year": 2021,
+    "doi": "10.1109/MIUCC52538.2021.9447668",
+    "keywords": [
+      "GAN",
+      "Anomaly Detection",
+      "Surveillance",
+      "Video Analysis"
+    ],
+    "summary": "Predição de anomalias em vídeos de vigilância usando GAN para geração de frames futuros e MIL para classificação.",
+    "status": "to_read"
+  }
+]

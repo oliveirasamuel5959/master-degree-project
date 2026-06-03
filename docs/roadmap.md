@@ -255,11 +255,14 @@ Urban Threat BR Dataset.
 - SIBGRAPI
 - IJCNN
 
-## Journals
+## Paper Sources
 
-- IEEE Access
-- Pattern Recognition Letters
-- Expert Systems With Applications
+- Busca integrada SBC
+- Scielo Brasil
+- Semantic Scholar
+- Science Direct
+- IEEE Xplore
+- Papers with Code
 
 ## Deliverable
 
