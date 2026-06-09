@@ -124,7 +124,9 @@ Potential Brazilian dataset creation.
 - Human Activity Recognition
 - Human Trajectory Prediction
 - Human Intent Prediction
-- Social Interaction Modeling
+- Social Interaction Modeling 
+- Video Surveillance System Context-Aware Crime Anticipation Using Deep Learning
+- Threat Anticipation through Behavioral Context Modeling
 
 ## Deep Learning
 

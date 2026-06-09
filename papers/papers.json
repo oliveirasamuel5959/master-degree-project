@@ -1,6 +1,10 @@
 [
   {
     "title": "Early-Anomaly Prediction in Surveillance Cameras for Security Applications",
+    "authors": [
+      "John Doe",
+      "Jane Smith"
+    ],
     "year": 2021,
     "doi": "10.1109/MIUCC52538.2021.9447668",
     "keywords": [
@@ -9,7 +13,43 @@
       "Surveillance",
       "Video Analysis"
     ],
-    "summary": "Predição de anomalias em vídeos de vigilância usando GAN para geração de frames futuros e MIL para classificação.",
+    "status": "to_read"
+  },
+  {
+    "title": "Vision-Based Pedestrian Gesture Recognition System Using Spatiotemporal Features",
+    "authors": [
+      "MD Aminul Islam",
+      "Xiaohui Cui"
+    ],
+    "year": 2025,
+    "doi": "10.65286/icic.v21i2.94720",
+    "keywords": [
+      "Autonomous driving",
+      "Vulnerable Road User",
+      "Spatiotemporal features",
+      "long-short term memory LSTM"
+    ],
+    "status": "to_read"
+  },
+  {
+    "title": "Image and Video-Based Crime Prediction Using Object Detection and Deep Learning",
+    "authors": [
+      "Mohammed Boukabous",
+      "Mostafa Azizi"
+    ],
+    "year": 2023,
+    "doi": "10.11591/eei.v12i3.5157",
+    "keywords": [
+      "Crime Prediction",
+      "Deep Learning",
+      "Object Detection",
+      "Security Intelligence",
+      "YOLO",
+      "Video Surveillance",
+      "Weapon Detection"
+    ],
+    "summary": "This paper proposes a deep learning-based surveillance system for crime prediction through image and video analysis. The system detects potentially dangerous objects, including firearms and bladed weapons, to alert authorities before incidents occur. The authors compare YOLO, SSD, and Faster R-CNN object detection models and conclude that YOLOv5 provides the best trade-off between detection accuracy (mAP) and inference speed, making it suitable for real-time surveillance applications.",
+    "research_area": "Computer Vision / Intelligent Surveillance Systems",
     "status": "to_read"
   }
 ]
