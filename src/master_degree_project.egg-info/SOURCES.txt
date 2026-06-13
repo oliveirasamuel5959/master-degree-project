@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+src/__init__.py
+src/main.py
+src/experiments/tests.py
+src/master_degree_project.egg-info/PKG-INFO
+src/master_degree_project.egg-info/SOURCES.txt
+src/master_degree_project.egg-info/dependency_links.txt
+src/master_degree_project.egg-info/requires.txt
+src/master_degree_project.egg-info/top_level.txt
+src/notebooks/__init__.py
+src/notebooks/utils/ComputerVision.py
+src/notebooks/utils/__init__.py

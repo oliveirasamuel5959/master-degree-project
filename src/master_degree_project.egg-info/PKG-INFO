@@ -1,0 +1,274 @@
+Metadata-Version: 2.4
+Name: master-degree-project
+Version: 0.1.0
+Summary: Add your description here
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: ipykernel>=7.3.0
+Requires-Dist: jupyter>=1.1.1
+Requires-Dist: matplotlib>=3.11.0
+Requires-Dist: numpy>=2.4.6
+Requires-Dist: opencv-python>=4.13.0.92
+Requires-Dist: pandas>=3.0.3
+
+# Master Degree Project
+
+# Urban Threat Anticipation Using Computer Vision and Temporal Deep Learning
+
+## Overview
+
+Urban surveillance systems are widely used to improve public safety, monitor public spaces, and assist law enforcement agencies. Despite the large number of cameras deployed in cities, most surveillance systems remain reactive, detecting incidents only after they have already occurred.
+
+This project investigates whether criminal activities can be anticipated before their occurrence by analyzing behavioral patterns captured by surveillance cameras. The research combines Computer Vision, Deep Learning, Temporal Modeling, and Explainable Artificial Intelligence to develop an intelligent system capable of recognizing threat evolution and estimating the probability of future criminal events.
+
+The project is being developed as part of a Master's Degree in Artificial Intelligence.
+
+---
+
+## Problem Statement
+
+Current intelligent surveillance systems are primarily designed to detect events such as:
+
+- Robbery
+- Assault
+- Fighting
+- Shoplifting
+- Vandalism
+
+after the event has already started or concluded.
+
+This reactive approach limits the ability of security professionals to intervene before harm occurs.
+
+The central research question of this project is:
+
+> Can criminal activities be anticipated from human behavioral patterns observed in surveillance videos before the criminal event actually occurs?
+
+Instead of detecting a robbery after it happens, the proposed system aims to identify behavioral indicators that precede criminal actions, enabling early warning generation and proactive intervention.
+
+---
+
+## Research Objectives
+
+### Main Objective
+
+Develop a computer vision system capable of anticipating criminal activities in urban environments through temporal modeling of human behavior.
+
+### Specific Objectives
+
+- Detect and track individuals in surveillance videos.
+- Extract spatial, temporal, and interaction-based features.
+- Model behavioral evolution using temporal deep learning architectures.
+- Estimate threat probability before a criminal event occurs.
+- Investigate the contribution of attention mechanisms.
+- Provide interpretable explanations for model predictions.
+- Evaluate the feasibility of building a Brazilian surveillance dataset for threat anticipation.
+
+---
+
+## Proposed Approach
+
+The system follows a multi-stage pipeline:
+
+```text
+Video Stream
+      ↓
+Object Detection (YOLO)
+      ↓
+Multi Object Tracking (ByteTrack)
+      ↓
+Feature Extraction
+      ↓
+Temporal Modeling (LSTM)
+      ↓
+Self-Attention
+      ↓
+Threat Prediction
+      ↓
+Alert Generation
+```
+
+The goal is not only to recognize criminal events but also to model the sequence of behaviors that precede them.
+
+---
+
+## Threat Evolution Model
+
+Instead of using a simple binary classification such as:
+
+```text
+Normal
+Crime
+```
+
+the project investigates a behavioral taxonomy based on threat evolution:
+
+| Class | Description |
+|---------|-------------|
+| Normal | No apparent threat |
+| Observation | Potential victim observation |
+| Approach | Consistent reduction of distance |
+| Following | Persistent victim tracking |
+| Interception | Blocking or surrounding behavior |
+| Crime | Criminal action execution |
+
+This formulation transforms the problem from event detection into event anticipation.
+
+---
+
+## Scientific Contributions
+
+### 1. Temporal Dataset Re-Annotation
+
+Creation of temporal labels describing the evolution of suspicious behavior.
+
+### 2. Threat Evolution Taxonomy
+
+Definition of intermediate behavioral states preceding criminal events.
+
+### 3. Early Threat Prediction Model
+
+Development of a deep learning architecture for crime anticipation.
+
+### 4. Explainable AI Framework
+
+Integration of attention mechanisms and visualization methods to explain model decisions.
+
+### 5. Urban Threat BR Dataset (Future Work)
+
+Potential creation of a Brazilian dataset focused on urban threat anticipation.
+
+---
+
+## Technologies
+
+### Programming Language
+
+- Python
+
+### Deep Learning
+
+- PyTorch
+
+### Computer Vision
+
+- OpenCV
+- Ultralytics YOLO
+
+### Tracking
+
+- ByteTrack
+
+### Experiment Tracking
+
+- Weights & Biases
+
+### Annotation
+
+- CVAT
+- Roboflow
+
+### Development Environment
+
+- VSCode
+- Jupyter Notebook
+- Google Colab
+
+---
+
+## Datasets
+
+The following datasets will be explored:
+
+- UCF-Crime
+- XD-Violence
+- RWF-2000
+- UCF101
+- Kinetics
+
+Future work may include the development of a custom dataset specifically designed for threat anticipation.
+
+---
+
+## Evaluation Metrics
+
+### Classification Metrics
+
+- Accuracy
+- Precision
+- Recall
+- F1 Score
+
+### Prediction Metrics
+
+- ROC-AUC
+- PR-AUC
+
+### Anticipation Metrics
+
+- Average Anticipation Time
+- Early Prediction Rate
+- Time-To-Event
+
+---
+
+## Research Topics
+
+This project intersects several active research areas:
+
+- Computer Vision
+- Video Understanding
+- Human Activity Recognition
+- Action Anticipation
+- Crime Anticipation
+- Temporal Deep Learning
+- Human Trajectory Prediction
+- Multi-Object Tracking
+- Explainable AI
+- Intelligent Surveillance Systems
+
+---
+
+## Repository Structure
+
+```text
+master-degree-project/
+
+├── docs/
+│   ├── mission.md
+│   ├── roadmap.md
+│   ├── architecture.md
+│   └── requirements.md
+│
+├── datasets/
+├── notebooks/
+├── src/
+├── experiments/
+├── papers/
+├── results/
+└── README.md
+```
+
+---
+
+## Expected Impact
+
+The long-term vision of this research is to move surveillance systems from reactive detection to proactive threat anticipation.
+
+By identifying suspicious behavioral patterns before criminal actions occur, the proposed system may contribute to:
+
+- Public safety
+- Smart city initiatives
+- Crime prevention strategies
+- Decision support systems for security professionals
+
+---
+
+## Author
+
+**Samuel Patrício de Oliveira**
+
+Master's Degree Candidate in Artificial Intelligence
+
+Centro Universitário FEI
+
+São Bernardo do Campo - Brazil
