@@ -6,12 +6,20 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "ipykernel>=7.3.0",
+    "jedi==0.19.2",
     "jupyter>=1.1.1",
     "matplotlib>=3.11.0",
     "numpy>=2.4.6",
     "opencv-python>=4.13.0.92",
     "pandas>=3.0.3",
 ]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
 [dependency-groups]
 dev = [
