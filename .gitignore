@@ -130,9 +130,7 @@ dmypy.json
 
 # Saved Models
 save/
-data/
 datasets/
-outputs/
 .pt
 
 # pycharm files
