@@ -27,3 +27,4 @@ def dataset_frames_labels(dataset_path: Path, rand_num: int):
     labels.append(video_path.name)
     
   return frames, labels
+
