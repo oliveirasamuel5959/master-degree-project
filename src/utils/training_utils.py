@@ -36,7 +36,7 @@ def save_history_and_plots(history, output_dir, prefix):
       prefix (_type_): ex.: "train" ou "val"
   """
 
-  # os.makedirs(output_dir, exist_ok=True)
+  os.makedirs(output_dir, exist_ok=True)
 
   # ---------------------
   # History to Dataframe
@@ -44,7 +44,7 @@ def save_history_and_plots(history, output_dir, prefix):
   hist_df = pd.DataFrame(history)
   hist_df["epoch"] = hist_df.index + 1
 
-  csv_path = os.path.join(output_dir, f"{prefix}_history.csv")
+  csv_path = os.path.join(output_dir, f"{prefix}_.csv")
   hist_df.to_csv(csv_path, index=False)
 
   # ---------------------
