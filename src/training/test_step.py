@@ -34,30 +34,33 @@ def test_step(
     model.eval() 
 
     # Setup test loss and test accuracy values
-    test_loss, test_acc = 0, 0
+    total_loss = 0.0
+    correct = 0
+    total = 0
 
     # Turn on inference context manager
     with torch.inference_mode():
       
       # Loop through DataLoader batches
-      for batch, (X, y) in tqdm(enumerate(dataloader), total=len(dataloader), desc="Testing", leave=False):
+      for batch, (X, y) in tqdm(enumerate(dataloader), total=len(dataloader), desc="Validation", leave=False):
         # Send data to target device
         X, y = X.to(device), y.to(device)
 
         # 1. Forward pass
-        test_pred_logits = model(X)
+        logits = model(X)
 
         # 2. Calculate and accumulate loss
-        loss = loss_fn(test_pred_logits, y)
-        test_loss += loss.item()
+        loss = loss_fn(logits, y)
+        batch_size = y.size(0)
+        total_loss += loss.item() * batch_size
 
         # Calculate and accumulate accuracy
-        test_pred_labels = test_pred_logits.argmax(dim=1)
-        test_acc += ((test_pred_labels == y).sum().item()/len(test_pred_labels))
+        preds = logits.argmax(dim=1)
+        correct += (preds == y).sum().item() 
+        total += batch_size
             
-
     # Adjust metrics to get average loss and accuracy per batch 
-    test_loss = test_loss / len(dataloader)
-    test_acc = test_acc / len(dataloader)
+    test_loss = total_loss / total
+    test_acc = correct / total
     
     return test_loss, test_acc

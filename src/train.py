@@ -7,7 +7,8 @@ from tqdm.auto import tqdm
 from typing import Dict, List, Tuple, Optional
 from torch.utils.tensorboard import SummaryWriter
 
-from src.training import train_step, test_step
+from src.training.train_step import train_step
+from src.training.test_step import test_step
 
 def train(
   model: torch.nn.Module, 
@@ -67,6 +68,7 @@ def train(
     print(f"[Epoch 0] Initial Learning Rate: {previous_lr:.6f}")
     
     for epoch in tqdm(range(epochs)):
+      
       train_loss, train_acc = train_step(
         model=model,
         dataloader=train_dataloader,
