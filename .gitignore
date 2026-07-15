@@ -132,6 +132,7 @@ dmypy.json
 save/
 data/
 .pt
+.pth
 
 # pycharm files
 .idea/
