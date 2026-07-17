@@ -52,10 +52,10 @@ def save_history_and_plots(history, output_dir, prefix):
   # ---------------------
   fig_acc, ax_acc = plt.subplots(figsize=(7, 5))
 
-  ax_acc.plot(hist_df["epoch"], hist_df["accuracy"], label="Train Accuracy")
+  ax_acc.plot(hist_df["epoch"], hist_df["train_acc"], label="Train Accuracy")
 
   if "val_accuracy" in hist_df:
-    ax_acc.plot(hist_df["epoch"], hist_df["val_accuracy"], label="Validation Accuracy")
+    ax_acc.plot(hist_df["epoch"], hist_df["test_acc"], label="Validation Accuracy")
 
   ax_acc.set_xlabel("Epoch")
   ax_acc.set_ylabel("Accuracy")
@@ -73,10 +73,10 @@ def save_history_and_plots(history, output_dir, prefix):
   # ---------------------
   fig_loss, ax_loss = plt.subplots(figsize=(7, 5))
 
-  ax_loss.plot(hist_df["epoch"], hist_df["loss"], label="Train Loss")
+  ax_loss.plot(hist_df["epoch"], hist_df["train_loss"], label="Train Loss")
 
   if "val_loss" in hist_df:
-    ax_loss.plot(hist_df["epoch"], hist_df["val_loss"], label="Validation Loss")
+    ax_loss.plot(hist_df["epoch"], hist_df["test_loss"], label="Validation Loss")
 
   ax_loss.set_xlabel("Epoch")
   ax_loss.set_ylabel("Loss")
